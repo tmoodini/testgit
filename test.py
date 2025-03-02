@@ -1,5 +1,6 @@
 import pandas as pd
-import numpy as np
+import numpy
 
 print("Hello World")
 s = pd.Series([1, 3, 5, np.nan, 6, 8])
+
