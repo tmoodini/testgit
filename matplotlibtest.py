@@ -32,6 +32,8 @@ class PlotServer:
                     <br>
                     <button type="submit">Plot</button>
                 </form>
+                <br>
+                <div id="plot_result"></div>
             </body>
         </html>
         """
@@ -56,10 +58,21 @@ class PlotServer:
         <html>
             <head><title>Plot Result</title></head>
             <body>
-                <h2>Plot Result</h2>
-                <img src="data:image/png;base64,{plot_url}" />
+                <h2>Enter X and Y values to plot</h2>
+                <form method="get" action="generate_plot">
+                    <label for="x">X values (comma separated):</label>
+                    <input type="text" id="x" name="x" />
+                    <br>
+                    <label for="y">Y values (comma separated):</label>
+                    <input type="text" id="y" name="y" />
+                    <br>
+                    <button type="submit">Plot</button>
+                </form>
                 <br>
-                <a href="plot">Go back</a>
+                <div id="plot_result">
+                    <h2>Plot Result</h2>
+                    <img src="data:image/png;base64,{plot_url}" />
+                </div>
             </body>
         </html>
         """
